@@ -1,0 +1,18 @@
+
+public class CadastroDeLivros {
+	public static void main(String[] args) {
+		Livro livro = new Livro();
+		livro.nome = "Java 8 Prático";
+		// livro.autor="";
+		livro.descricao = "Novos recursos da linguagem";
+		livro.valor = 59.9;
+		livro.isbn = "978-85-66250-46-6";
+		
+		Livro outroLivro = new Livro();
+		livro.nome = "Lógica de programação";
+		// livro.autor="";
+		livro.descricao = "Crie seus primeiros programas";
+		livro.valor = 59.9;
+		livro.isbn = "978-85-66250-22-0";
+	}
+}
