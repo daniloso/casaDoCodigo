@@ -1,0 +1,49 @@
+
+public class Livro {
+
+	String nome;
+	String descricao;
+	double valor;
+	String isbn;
+	Autor autor;
+	double valorComDesconto;
+	
+	public void mostrarDetalhes() {
+		System.out.println("Mostrando detalhes do livro: ");
+		System.out.println("Nome: "+nome);
+		System.out.println("Descrição: "+descricao);
+		System.out.println("Valor atual: "+valor);
+		if (aplicaDescontoDe(valor)) {
+			System.out.println("Desconto não pode ser maior do que 30%");
+		}else {
+			System.out.println("Valor com desconto: "+this.valorComDesconto);
+		}
+			
+		System.out.println("Valor com desconto: "+valorComDesconto);
+		System.out.println("ISBN: "+isbn);
+		
+			
+		if (this.temAutor()) {
+			autor.mostrarDetalhesAutor();
+		}
+	}
+				
+		
+	boolean temAutor() {
+		return this.autor != null;
+		
+	}
+	
+	
+	public boolean aplicaDescontoDe(double porcentagem) {
+		if (porcentagem>0.3) {
+			
+			return false;
+		}
+		this.valorComDesconto = this.valor-=this.valor*porcentagem;	
+		
+		return true;
+	}
+	
+	
+}

@@ -1,0 +1,41 @@
+
+public class CadastroDeLivros {
+	public static void main(String[] args) {
+		
+		Autor autor = new Autor();
+		autor.nome= "Zé";
+		autor.CPF="123.456.789-10";
+		autor.email="ze@casadocodigo.com.br";
+		
+		Livro livro = new Livro();
+		livro.nome = "Java 8 Prático";
+		livro.descricao = "Novos recursos da linguagem";
+		livro.valor = 59.9;
+		
+		if (!livro.aplicaDescontoDe(0.1)) {
+			System.out.println("Desconto não pode ser maior do que 30%");
+		}
+		
+		livro.isbn = "978-85-66250-46-6";
+		livro.autor=autor;
+		livro.mostrarDetalhes();
+		
+		Autor outroAutor = new Autor();
+		outroAutor.CPF="987.654.321-0";
+		outroAutor.nome="Jão";
+		outroAutor.email="jao@casadocodigo.com.br";
+		
+		Livro outroLivro = new Livro();
+		outroLivro.nome = "Lógica de programação";
+		outroLivro.descricao = "Crie seus primeiros programas";
+		outroLivro.valor = 59.9;
+		
+		if (!outroLivro.aplicaDescontoDe(0.4)) {
+			System.out.println("Desconto não pode ser maior do que 30%");
+		}
+		
+		outroLivro.isbn = "978-85-66250-22-0";
+		outroLivro.autor=outroAutor;
+		outroLivro.mostrarDetalhes();
+	}
+}
