@@ -1,20 +1,115 @@
 
 public class Livro {
+	
+	public Livro(Autor autor) {
+		this();
+		this.autor=autor;
+	}
+	public Livro() {
+		this.isbn="000-00-00000-00-0";
+	}
 
-	String nome;
-	String descricao;
-	double valor;
-	String isbn;
-	Autor autor;
+	private String nome;
+	private String descricao;
+	private double valor;
+	private String isbn;
+	private Autor autor;
+	private double valorComDesconto;
 	
 	public void mostrarDetalhes() {
-		System.out.println("Mostrando detalhes do livro: ");
+		System.out.println("***Mostrando detalhes do livro*** ");
 		System.out.println("Nome: "+nome);
 		System.out.println("Descrição: "+descricao);
-		System.out.println("Valor: "+valor);
 		System.out.println("ISBN: "+isbn);
 		
-		autor.mostrarDetalhes();
-				
+			
+		if (this.temAutor()) {
+			autor.mostrarDetalhesAutor();
+		}
 	}
+				
+		
+	boolean temAutor() {
+		return this.autor != null;
+		
+	}
+	
+	
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+
+	public double getValor() {
+		return valor;
+	}
+
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+
+//	public void setAutor(Autor autor) {
+//		this.autor = autor;
+//	}
+
+
+	public double getValorComDesconto() {
+		return valorComDesconto;
+	}
+
+	public void setValorComDesconto(double valorComDesconto) {
+		this.valorComDesconto = valorComDesconto;
+	}
+
+	public boolean aplicaDescontoDe(double porcentagem) {
+		
+		if (porcentagem>0.3) {
+			System.out.println("Desconto não pode ser maior do que 30%");
+			System.out.println("---");
+			return false;
+			
+		}else {
+			this.setValorComDesconto (this.valor-=this.valor*porcentagem);	
+			System.out.println("Valor com desconto: "+this.valorComDesconto);
+			System.out.println("---");
+			return true;
+		}
+		
+	}
+		
+			
+	
+	
 }

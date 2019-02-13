@@ -8,6 +8,7 @@
 		<item value="250" key="dialogHeight"/>
 		<item value="350" key="dialogWidth"/>
 		<list key="textEntries">
+<<<<<<< HEAD
 			<item value="1"/>
 		</list>
 		<list key="orderedElements">
@@ -18,6 +19,14 @@
 		</list>
 		<list key="textArray">
 			<item value="ggas"/>
+=======
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+>>>>>>> master
 		</list>
 	</section>
 	<section name="NewWizardAction">
