@@ -8,6 +8,9 @@ public class MeuPrimeiroPrograma {
 		
 		System.out.println("Hello world!");
 
+		
+		}
+		
 	}
 
-}
+
