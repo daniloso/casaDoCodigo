@@ -1,5 +1,5 @@
 
-public class Ebook extends Livro{
+public class Ebook extends Livro implements Promocional{
 	
 	private String waterMark;
 	
@@ -28,7 +28,6 @@ public class Ebook extends Livro{
 		}
 	}
 	
-	@Override
 	public boolean aplicaDescontoDe(double porcentagem) {
 		
 		if (porcentagem>0.15) {
